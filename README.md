@@ -51,8 +51,7 @@ In this project, you will add the following functionality:
 - POST **/api/register**
 
     Registers a new user. On success a status code 201 is returned. The body of the response contains
-a JSON object with the newly added user. A `Location` header contains the URI
-of the new user. On failure status code 400 (bad request) is returned. Note: The 
+a JSON object with the newly added user. Add a `Location` field to the response: it should contain the new user ID. On failure status code 400 (bad request) is returned. Note: The 
 password is hashed before it is stored in the database. Once hashed, the original 
 password is discarded. Your database should have three fields: id (unique index),
 username and password. 
